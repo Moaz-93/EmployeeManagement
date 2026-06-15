@@ -1,0 +1,22 @@
+﻿@model EmployeeManagement.Models.Department
+
+<div class="card shadow-sm">
+
+    <div class="card-header bg-info text-white">
+        <h4 class="mb-0"><i class="fa-solid fa-building me-2"></i> Department Details</h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Department Id</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Department Name</th>
+                <td>@Model.Name</td>
+            </tr>
+        </table>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="fa-solid fa-pen me-2"></i> Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Department>
+
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold"><i class="fa-solid fa-building me-2"></i> Departments</h2>
+    <a asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus me-2"></i> Add Department</a>
+</div>
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+<div class="card text-center shadow-sm mb-4">
+    <div class="card-body">
+        <h6 class="text-muted">Total Departments</h6>
+        <h1 class="fw-bold text-primary">@Model.Count()</h1>
+    </div>
+</div>
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No departments found.
+        <a asp-action="Create">Create your first department</a>
+    </div>
+}
+else
+{
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Department Name</th>
+                        <th width="180">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm" title="Details"><i class="fa-solid fa-eye"></i></a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" title="Delete"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

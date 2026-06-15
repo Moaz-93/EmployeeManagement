@@ -1,0 +1,26 @@
+﻿@model EmployeeManagement.ViewModels.DepartmentVM
+
+@{
+    ViewData["Title"] = "Create Department";
+}
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h4 class="mb-0"><i class="fa-solid fa-building-circle-check me-2"></i> Create Department</h4>
+    </div>
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk me-2"></i> Save</button>
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

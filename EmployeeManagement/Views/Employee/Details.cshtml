@@ -1,0 +1,53 @@
+﻿@model EmployeeManagement.Models.Employee
+
+<div class="card shadow-sm">
+    <div class="card-header bg-info text-white">
+        <h4 class="mb-0">
+            <i class="fa-solid fa-user me-2"></i>
+            Employee Details
+        </h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Full Name</th>
+                <td>@Model.FullName</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>@Model.MobileNumber</td>
+            </tr>
+            <tr>
+                <th>Job Title</th>
+                <td>@Model.JobTitle</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>@Model.Department?.Name</td>
+            </tr>
+            <tr>
+                <th>Hire Date</th>
+                <td>@Model.HireDate.ToString("dd/MM/yyyy")</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>
+                    @if (Model.IsActive)
+                    {
+                        <span class="badge rounded-pill bg-success">Active</span>
+                    }
+                    else
+                    {
+                        <span class="badge rounded-pill bg-danger">Inactive</span>
+                    }
+                </td>
+            </tr>
+        </table>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="fa-solid fa-pen me-2"></i> Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>
