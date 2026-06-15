@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Moaz\\OneDrive\\Desktop\\EmployeeManagement\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4882BE96-C947-4B35-9D9A-78B6434F63C4}|EmployeeManagement\\EmployeeManagement.csproj|c:\\users\\moaz\\onedrive\\desktop\\employeemanagement\\employeemanagement\\views\\department\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4882BE96-C947-4B35-9D9A-78B6434F63C4}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\views\\department\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,19 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Moaz\\OneDrive\\Desktop\\EmployeeManagement\\EmployeeManagement\\Views\\Department\\Delete.cshtml",
-              "RelativeDocumentMoniker": "EmployeeManagement\\Views\\Department\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Moaz\\OneDrive\\Desktop\\EmployeeManagement\\EmployeeManagement\\Views\\Department\\Delete.cshtml*",
-              "RelativeToolTip": "EmployeeManagement\\Views\\Department\\Delete.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-15T22:57:58.746Z",
-              "EditorCaption": ""
             }
           ]
         }
